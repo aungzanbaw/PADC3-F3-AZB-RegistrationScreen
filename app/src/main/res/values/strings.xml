@@ -4,4 +4,5 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="lbl_forget_password"><i><u>Forget Password?</u></i></string>
     <string name="lbl_register"><i><u>New seller? Register</u></i></string>
+    <string name="lbl_login"><i><u>To Login</u></i></string>
 </resources>
