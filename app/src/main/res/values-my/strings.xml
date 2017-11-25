@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_padc">PADCActivity</string>
+    <string name="title_activity_login">ပန္ျပေပးပါမယ္</string>
+    <string name="lbl_forget_password"><i><u>Forget Password?</u></i></string>
+    <string name="lbl_register"><i><u>New seller? Register</u></i></string>
+</resources>

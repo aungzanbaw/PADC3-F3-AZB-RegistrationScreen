@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Register" />
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_registration_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Login"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="36dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimary"
+            android:foreground="@drawable/ripple_primary"
+            android:padding="8dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="36dp"
+            android:textColorHint="@color/colorPrimary">
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Name"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="36dp"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/input_name">
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="Phone"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="36dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="18dp"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/input_phone">
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Email"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="36dp"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/input_email">
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:drawableRight="@drawable/ic_visibility_black_24dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="36dp"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/input_password">
+            <EditText
+                android:id="@+id/et_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Confirm Password"
+                android:drawableRight="@drawable/ic_visibility_black_24dp"/>
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:id="@+id/gender_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="42dp"
+            android:textSize="18dp"
+            android:layout_below="@+id/input_confirm_password"/>
+        <RadioGroup
+            android:id="@+id/rg_Gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="36dp"
+            android:layout_below="@+id/gender_label"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="36dp"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/rg_Gender">
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:hint="Address"/>
+            <CheckBox
+                android:id="@+id/cb_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I am at my home" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_below="@+id/input_address"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginLeft="36dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="true"
+            android:foreground="@drawable/ripple_white"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
