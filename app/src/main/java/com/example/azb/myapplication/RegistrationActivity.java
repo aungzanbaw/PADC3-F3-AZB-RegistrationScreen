@@ -80,8 +80,8 @@ public class RegistrationActivity extends AppCompatActivity {
         tvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, "\"Forget Password\" is coming soon", Snackbar.LENGTH_INDEFINITE)
-                        .setAction("Action",null).show();
+                Intent intent = LoginActivity.newIntent(getApplicationContext());
+                startActivity(intent);
             }
         });
 

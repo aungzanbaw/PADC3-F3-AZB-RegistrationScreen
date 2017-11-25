@@ -1,5 +1,6 @@
 package com.example.azb.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -75,5 +76,10 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public static Intent newIntent(Context context){
+        Intent intent = new Intent(context, LoginActivity.class);
+        return intent;
     }
 }
